@@ -22,6 +22,6 @@ def verify(index):
 
 numbers= [0,3,4,5,5]
 
-result = recursive_binary_search(numbers, 5)
+result = recursive_binary_search(numbers, 7)
 
 verify(result)
