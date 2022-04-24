@@ -1,5 +1,3 @@
-from operator import le
-from turtle import right
 
 
 def merge_sort(list):
@@ -58,3 +56,11 @@ def merge(left, right):
     while j < len(right):
         l.append(right[j])
         j += 1
+
+    return l
+
+
+numbers = [23,434,23,12,55,1,2,5,34,34]
+
+l = merge_sort(numbers)
+print(l)
