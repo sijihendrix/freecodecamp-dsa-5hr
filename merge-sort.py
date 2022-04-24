@@ -9,14 +9,12 @@ def merge_sort(list):
     Conquer: Recursively sort the sublists created in previous step
     Combile: merge sorted sublists created in previous step
     """
-
     if len(list) <= 1:
         return list
 
     left_half, right_half = split(list)
     left = merge_sort(left_half)
     right = merge_sort(right_half)
-
     return merge(left, right)
 
 
@@ -60,7 +58,8 @@ def merge(left, right):
     return l
 
 
-numbers = [23,434,23,12,55,1,2,5,34,34]
-
-l = merge_sort(numbers)
-print(l)
+def verify_sorted(list):
+    n = len(list)
+    if n == 0 or  n == 1: 
+        return True
+    return list[0] < list[1] and verify_sorted(list[1:])
