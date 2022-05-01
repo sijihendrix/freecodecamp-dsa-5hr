@@ -22,6 +22,7 @@ def split(list):
     """
     Divide the onsorted list at the middle into sublists
     Returns two sub lists: left and right
+    
     """
     midpoint = len(list)// 2 
     left =  list[:midpoint]
@@ -33,6 +34,7 @@ def merge(left, right):
     """
     Merges two lists (arrays), sorting them in the process 
     Returns a new merged list
+    takes 0(log(n))
     """
     l = []
     i = 0
@@ -63,3 +65,4 @@ def verify_sorted(list):
     if n == 0 or  n == 1: 
         return True
     return list[0] < list[1] and verify_sorted(list[1:])
+
